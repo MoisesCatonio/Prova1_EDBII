@@ -16,5 +16,6 @@ void insertElement(int value_passed, node * sentinel);
 void showList(node * sentinel);
 int countElements(node * sentinel);
 void swapValue(int value_passed, node * sentinel, int new_value);
+void mergeLists(node * sentinel_1, node * sentinel_2);
 
 #endif

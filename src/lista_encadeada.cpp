@@ -55,3 +55,10 @@ void swapValue(int value_passed, node * sentinel, int new_value){
         }
     }
 }
+
+void mergeLists(node * sentinel_1, node * sentinel_2){
+    while(sentinel_2 != NULL){
+        insertElement(sentinel_2->value, sentinel_1);
+        sentinel_2 = sentinel_2->next;
+    }
+}
