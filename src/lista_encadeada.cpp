@@ -15,3 +15,43 @@ void insertElement(int value_passed, node * sentinel){
     sentinel->next->value = value_passed;
     sentinel->next->next = NULL;
 }
+
+void showList(node * sentinel){
+    while(sentinel != NULL){
+        cout<<sentinel->value;
+        sentinel = sentinel->next;
+        cout<<endl;
+    }
+}
+
+int countElements(node * sentinel){
+    int total = 0;
+
+    while(sentinel != NULL){
+        total = total + 1;
+        sentinel = sentinel->next;
+    }
+
+    if(total == 0){
+        return 0;
+    } else {
+        return total;
+    }
+    
+}
+
+void swapValue(int value_passed, node * sentinel, int new_value){
+    int swapped = 0;
+    while(sentinel != NULL && swapped == 0){
+        if(sentinel->value == value_passed){
+            sentinel->value = new_value;
+            swapped = 1;
+        }
+        sentinel = sentinel->next;
+    }
+    if(swapped == 0){
+         if(sentinel->value == value_passed){
+            sentinel->value = new_value;
+        }
+    }
+}

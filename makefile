@@ -4,7 +4,7 @@
 PROG = bin/listed
 CC = g++
 CPPFLAGS = -O0 -g -W -Wall -pedantic -std=c++11 -Iinclude
-OBJS = main.o lista_encadeada.o merge.o
+OBJS = main.o lista_encadeada.o
 RM = -f *.o
 
 $(PROG) : $(OBJS)
@@ -16,9 +16,6 @@ main.o :
 
 lista_encadeada.o : include/lista_encadeada.hpp
 	$(CC) $(CPPFLAGS) -c src/lista_encadeada.cpp
-
-merge.o : include/merge.hpp
-	$(CC) $(CPPFLAGS) -c src/merge.cpp
 
 clean:
 	rm -f $(PROG) build/*.o

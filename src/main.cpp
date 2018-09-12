@@ -1,4 +1,4 @@
-#include "merge.hpp"
+#include "lista_encadeada.hpp"
 
 int main(){
 
@@ -12,12 +12,11 @@ int main(){
     insertElement(3, sentinel);
     insertElement(5, sentinel);
 
-
-    while(sentinel != NULL){
-        cout<<sentinel->value;
-        sentinel = sentinel->next;
-        cout<<endl;
-    }
+    //função da lib lista_encadeada, para exibir a lista simplesmente encadeada.
+    showList(sentinel);
+    cout<<"---------------"<<endl;
+    swapValue(2, sentinel, 7);
+    showList(sentinel);
 
     return 0;
 }
